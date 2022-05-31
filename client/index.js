@@ -1,4 +1,3 @@
-const {data} = require('../server/data')
 const { response } = require("express")
 const searchField = document.querySelector('#search-input')
 const searchBtn = document.querySelector('#search')
@@ -11,11 +10,21 @@ const searchThroughApi = (e) => {
     let url = `http://api.serpstack.com/search
     ? access_key = ${accessKey}
     & query = ${searchField}`
+
+    // fetch(url)
+    //     .then(response => response.json())
+    //     .then(results => {
+    //         results.forEach(result => {
+    //             outputFields.textContent = results;
+    //             document.getElementsByClassName('search-display-handling').style.display = 'none';
+    //         })
+    //     })
+    //     .catch(console.error('you are throwing an error'))
 }
 
 
 searchBtn.addEventListener('submit', searchThroughApi)
-luckyBtn.addEventListener('submit', searchThroughApi)
+// luckyBtn.addEventListener('submit', searchThroughApi(e))
 
 module.exports = {
     searchField,

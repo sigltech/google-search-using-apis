@@ -16,4 +16,6 @@
 
 ## ** Changelog **
 
+1. Created and styled the Google landing page
+2. 
 
