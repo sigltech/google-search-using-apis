@@ -1,21 +1,10 @@
-// const axios = require("axios");
+const indexjs = require('../client/index')
 
-// const options = {
-//   method: 'GET',
-//   url: 'https://matchilling-tronald-dump-v1.p.rapidapi.com/search/quote',
-//   params: {size: '25', page: 'The page number', query: '{query}'},
-//   headers: {
-//     accept: 'application/hal+json',
-//     'X-RapidAPI-Host': 'matchilling-tronald-dump-v1.p.rapidapi.com',
-//     'X-RapidAPI-Key': 'SIGN-UP-FOR-KEY'
-//   }
-// };
+const searchThroughApi = (e) => {
+    e.preventDefault()
+    let accessKey = 'cda251ad6cd7d2236b861b330566386f'
+    let url = `http://api.serpstack.com/search
+    ? access_key = ${accessKey}
+    & query = ${searchField}`
+}
 
-// axios.request(options).then(function (response) {
-// 	console.log(response.data);
-// }).catch(function (error) {
-// 	console.error(error);
-// });
-
-
-// module.exports = options;
