@@ -7,6 +7,7 @@
     <title>Google Clone</title>
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="icon" type="image/x-icon" href="./assets/imgs/google-favicon-vector-11573977012mieoxurfqx.png" style="border-radius: 100%;">
+    <script defer src="./js/index.js"></script>
 </head>
 <body>
 
@@ -47,17 +48,18 @@
                 <div class="search-buttons">
 
                     <form id="search">
-                        <input class="search-buttons-input" type="submit" value="Search">
+                        <input class="search-buttons-input" type="submit" value="Search" name="search">
                     </form>
+                    
                     <form id="feeling-Lucky">
-                        <input class="search-buttons-input" type="submit" value="I'm feeling lucky!">
+                        <input class="search-buttons-input" type="submit" value="I'm feeling lucky!" name="feeling-lucky">
                     </form>
 
                 </div>
             </div>
         </div>
 
-        <div class="search-results">
+        <div id="search-results" class="search-results">
             <div class="result1">
                 <p class="output"></p>
             </div>
