@@ -11,15 +11,15 @@ const searchThroughApi = (e) => {
     ? access_key = ${accessKey}
     & query = ${searchField}`
 
-    // fetch(url)
-    //     .then(response => response.json())
-    //     .then(results => {
-    //         results.forEach(result => {
-    //             outputFields.textContent = results;
-    //             document.getElementsByClassName('search-display-handling').style.display = 'none';
-    //         })
-    //     })
-    //     .catch(console.error('you are throwing an error'))
+    fetch(url)
+        .then(response => response.json())
+        .then(results => {
+            results.forEach(result => {
+                outputFields.textContent = results;
+                document.getElementsByClassName('search-display-handling').style.display = 'none';
+            })
+        })
+        .catch(console.error('you are throwing an error'))
 }
 
 
