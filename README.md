@@ -17,5 +17,12 @@
 ## ** Changelog **
 
 1. Created and styled the Google landing page
-2. 
+2. fetch serpAPI 
+3. render api on page using text input as query for search
+4. `display ="none"` for the search field to render results full page
+
+## ** still to do ** 
+
+1. render a search bar in the header to continue searches after first search commences
+2. figure out how to make search faster as currently there is no indication of processing or loading time
 
