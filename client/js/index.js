@@ -39,6 +39,30 @@ function searchThroughApi(e) {
         console.log(error)
     });
 }
+searchBtn.addEventListener('submit', searchThroughApi);
+    fetchData(query);
+    addDomElements();
+}
+
+
+async function fetchData(query) {
+    try {
+    await fetch(`http://api.serpstack.com/search?access_key=${YOUR_ACCESS_KEY}&query= ${query}`)
+        .then(response => response.json())
+        // .then(querys => query)
+    } catch {
+        console.log('error')
+    }
+};
+
+
+document.querySelector('#search').addEventListener('submit', searchThroughApi);
+
+
+const addDomElements = () => {
+    outputFields.textContent = fetchData(searchField);
+}
+
 
 
 searchBtn.addEventListener('submit', searchThroughApi);
