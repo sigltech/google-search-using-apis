@@ -142,3 +142,17 @@ header ul {
 .search-buttons input:hover {
     border: 1px solid #c0c0c0;
 }
+
+/* ---- styling the search results ---- */
+
+.results-h1 {
+   font-size: 32px; 
+   font-weight: 500;
+}
+
+
+.results-styling {
+    cursor: pointer;
+    border: 2px solid red;
+    margin: 1rem 4rem;
+}
