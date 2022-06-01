@@ -12,6 +12,7 @@ const query = searchField.textContent;
 const searchThroughApi = (e) => {
     e.preventDefault();
     fetchData(query);
+    addDomElements();
 }
 
 
@@ -19,18 +20,18 @@ async function fetchData(query) {
     try {
     await fetch(`http://api.serpstack.com/search?access_key=${YOUR_ACCESS_KEY}&query= ${query}`)
         .then(response => response.json())
-        .then(query => query)
+        // .then(querys => query)
     } catch {
         console.log('error')
     }
-}
+};
 
 
 document.querySelector('#search').addEventListener('submit', searchThroughApi);
 
 
 const addDomElements = () => {
-    outputFields.textContent = outputs;
+    outputFields.textContent = fetchData(searchField);
 }
 
 
