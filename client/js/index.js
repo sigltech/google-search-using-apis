@@ -5,7 +5,7 @@ const luckyBtn = document.querySelector('#feeling-Lucky');
 const outputFields = document.querySelector('#search-results');
 const searchFieldHandling = document.querySelector('.search-display-handling')
 
-const YOUR_ACCESS_KEY = '1c2c1c628f5ceb0db78cf4ded5ef728b';
+const YOUR_ACCESS_KEY = '';
 let result = '';
 
 function searchThroughApi(e) {
@@ -14,6 +14,7 @@ function searchThroughApi(e) {
     fetch(`http://api.serpstack.com/search?access_key=${YOUR_ACCESS_KEY}&query=${query}`)
     .then(response => {
         if (!response.ok) {
+            console.log(response)
             throw new Error("HTTP error " + response.status);
         }
         const responseJ = response.json();
@@ -29,11 +30,9 @@ function searchThroughApi(e) {
             <div>
             `;
             searchFieldHandling.style.display = 'none';
-            navSearchField.style.display = 'block'
+            // navSearchField.style.display = 'block'
             outputFields.innerHTML += result;
-            
-
-        })
+        });
     })
     .catch(error => {
         console.log(error)
